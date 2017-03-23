@@ -40,7 +40,7 @@ if ($post['chat']['type'] == 'private') {
           $req = array(
             'action' => 'sendMessage',
             'data' => array(
-              'text' => "Share your file with everyone.\n\n- /start <b>&lt;FILE ID&gt;</b> - Get a file by id.\n- /list - Show a list of your shared files.\n- /delete <b>&lt;FILE ID&gt;</b> - Delete a file.\n- /about - Show info about bot.\n- /help - Show this help.\n\nSend me a document to start uploading. Make sure you attach it as file, not as an image or video.",
+              'text' => "به اشتراک گذاشتن فایل های خود با هر کس.\n\n- /start <b>&lt;FILE ID&gt;</b> - دریافت فایل های شناسه.\n- /list - نمایش فایل های شما برای اشتراک\n- /delete <b>&lt;FILE ID&gt;</b> - حذف فایل.\n- /about - نمایش اطلاعات ربات\n- /help - نمایش کمک رسان ربات.\n\nبه من اطمینان حاصل کنید برای ارسال فایل های خود من با تمام وجودم انها را حفظ خواهم کرد ",
               'parse_mode' => 'html'
               )
             );
@@ -111,7 +111,7 @@ if ($post['chat']['type'] == 'private') {
         $req = array(
           'action' => 'sendMessage',
           'data' => array(
-            'text' => "RFiles Bot by @error_log\nReleased under the GNU GPLv2.0.\nSource code: https://github.com/radyakaze/rfiles"
+            'text' => "شما درباره چه چیزی میخواهید بدانید؟"
             )
           );
       break;
@@ -136,7 +136,7 @@ if ($post['chat']['type'] == 'private') {
 
         $req = array(
           'action' => 'sendMessage',
-          'data' => array('text' => 'Your file have been uploaded. Send this link to anyone you want and they will able to download the file:'."\n\n".'https://telegram.me/'.$config['bot_username'].'?start='.$file_id)
+          'data' => array('text' => 'فایل های خود را آپلود شده اند. ارسال این لینک به هر کسی که می خواهید و آنها را قادر به دانلود فایل:'."\n\n".'https://telegram.me/'.$config['bot_username'].'?start='.$file_id)
           );
     } else {
       $req = array(
